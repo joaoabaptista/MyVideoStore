@@ -23,7 +23,7 @@ public class Main {
         c2.setPhoneNumber("999999999");
         Account a2 = new Account();
         c2.addAccount(a2);
-        a2.deposit(2000);
+        a2.deposit(2200);
         System.out.println(c2.getId()
                 + " " + c2.getName()
                 + " " + c2.getPhoneNumber()
