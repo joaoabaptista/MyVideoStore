@@ -11,6 +11,9 @@
     <!-- use @Controller, @Service annotations -->
     <mvc:annotation-driven/>
 
+    <mvc:resources mapping="/static/**" location="/static/" />
+
+
     <!-- base package to search for Spring annotations -->
     <context:component-scan base-package="com.MyBank"/>
 
@@ -32,7 +35,7 @@
 
     <!-- Thymeleaf template resolver -->
     <bean id="templateResolver" class="org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver">
-<!--        <property name="prefix" value="/templates/"/>-->
+        <property name="prefix" value="WEB-INF/templates/"/>
         <property name="suffix" value=".html"/>
         <property name="templateMode" value="HTML"/>
         <property name="cacheable" value="false"/>

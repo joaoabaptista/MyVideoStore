@@ -1,0 +1,45 @@
+body {
+    background-color: lightblue;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*.container{*/
+/*    padding-top: 80px;*/
+/*    padding-bottom: 160px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: auto;*/
+/*    background-color: yellow;*/
+/*    margin-right: 200px;*/
+/*    margin-left: 200px;*/
+/*}*/
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.homepage{
+    /*background:*/
+    /*        linear-gradient(112.64deg, blue 0.33%, deeppink 100%);*/
+    padding: 0 40px;
+    background-size: cover;
+
+}
+
+.homepage .container{
+    padding-top: 80px;
+    padding-bottom: 160px;
+}
+
+.card{
+    margin-top: 40px;
+    max-width: 100%;
+    padding: 30px;
+    background-color: white;
+}
