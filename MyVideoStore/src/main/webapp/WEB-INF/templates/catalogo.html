@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogo</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>catalogo</h1>
+            <a th:href="@{/login}"  class="button-primary">LogIn</a>
+        </div>
+    </header>
+
+    <div class="customer-list">
+        <div th:each="customer : ${customers}" class="customer-box">
+            <div>
+                <img src="images/userprofile.png" alt="User profile photo" class="photo"/>
+            </div>
+            <div class="text-container">
+                <h2 class="name" th:text="${customer.name}"> </h2>
+
+                <p>Email: <span th:text="${customer.email}"></span></p>
+                <button type="button" class="button-second">Edit</button>
+                <button type="button" class="button-third">View Account</button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>
