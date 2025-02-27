@@ -1,4 +1,3 @@
-/home/joao-baptista/assignments/MyJavabank/MyJavaBank/src/main/java/com/MyBank/controllers/HomeController.java
 /home/joao-baptista/assignments/MyJavabank/MyJavaBank/src/main/java/com/MyBank/models/Account.java
 /home/joao-baptista/assignments/MyJavabank/MyJavaBank/src/main/java/com/MyBank/Exeptions/InvalidAmountException.java
 /home/joao-baptista/assignments/MyJavabank/MyJavaBank/src/main/java/com/MyBank/models/Customer.java

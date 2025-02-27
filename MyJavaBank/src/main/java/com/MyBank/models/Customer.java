@@ -9,6 +9,7 @@ public class Customer {
     private int id;
     private static int nextCustomerId = 1;
     private String name;
+    private String email;
     private String phoneNumber;
     private Map<Integer, Account> accounts = new HashMap();
 
@@ -30,6 +31,14 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPhoneNumber() {
