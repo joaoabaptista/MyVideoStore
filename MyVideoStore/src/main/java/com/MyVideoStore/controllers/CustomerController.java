@@ -13,6 +13,7 @@ import java.util.List;
 public class CustomerController {
 
     private List<Customer> clientes = new ArrayList<>();  //criar uma lista para armazenar os customers
+    //(Esta lista pode ser usada para testar a funcionalidade, porem a versão final os clientes e os seus dados devem ser armazenados numa Base de Dados)
 
     //pagina inicial
     @GetMapping
