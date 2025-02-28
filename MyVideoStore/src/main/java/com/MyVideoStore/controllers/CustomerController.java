@@ -22,7 +22,19 @@ public class CustomerController {
         return "catalogo";
     }
 
+     @GetMapping("createAccount")  //http://localhost:8080/VideoStore/createAccount
+        public String showForm(Model model) {
+            model.addAttribute("customer", new Customer());
+            return "createAccount";    //retorna a pagina createAccount.html ---->Fazer a pagina createAccount
+        }
 
+    @PostMapping("/createAccount")
+    public String addNew(@ModelAttribute("customer") Customer customer) {
+        clientes.add(customer);  //adiciona o cliente a lista
+        return "redirect:/";  //Redireciona para customerList.html
+    }
+
+    
     @GetMapping("login")  //http://localhost:8080/VideoStore/login
     public String showForm(Model model) {
         model.addAttribute("customer", new Customer());
