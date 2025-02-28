@@ -1,7 +1,6 @@
-com/MyVideoStore/controllers/CustomerController.class
-com/MyVideoStore/models/Customer.class
-com/MyVideoStore/Exeptions/InvalidAmountException.class
-com/MyVideoStore/Main.class
 com/MyVideoStore/models/Account.class
+com/MyVideoStore/controllers/CustomerController.class
 com/MyVideoStore/Exeptions/InsufficientFundsException.class
+com/MyVideoStore/models/Customer.class
 com/MyVideoStore/error/ErrorMessage.class
+com/MyVideoStore/Exeptions/InvalidAmountException.class

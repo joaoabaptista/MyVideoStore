@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}">-->
 </head>
 <body>
     <h1>Login</h1>
 
     <div class="form-container">
-        <h2>Add Client</h2>
         <form th:action="@{/login}" th:object="${customer}" method="post">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" th:field="*{name}" required>
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" th:field="*{userName}" required>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" th:field="*{email}" required>
+            <label for="password">Password:</label>
+            <input type="text" id="password" th:field="*{password}" required>
 
             <button type="submit">Login</button>
         </form>

@@ -15,7 +15,7 @@ public class CustomerController {
     private List<Customer> clientes = new ArrayList<>();  //criar uma lista para armazenar as contas dos clientes
     //(Esta lista pode ser usada para testar a funcionalidade, porem a versão final os clientes e os seus dados devem ser armazenados numa Base de Dados)
     
-    private Customer loggedInCustomer == null  //Variavel para armazenar um cliente que estaja logado
+    private Customer loggedInCustomer = null; //Variavel para armazenar um cliente que estaja logado
     
     //pagina inicial catalogo
     @GetMapping
@@ -37,11 +37,8 @@ public class CustomerController {
             if(c.getUserName()/*<---Obtém o nome de usuário do cliente existente*/.equals(customer.getUserName())/*<---Obtém o nome de usuário do cliente que está tentando se registrar ou fazer login.*/){
                 return "redirect:/createAccount?error"; //caso o cliente ja exista é redirecionado para uma pagina de erro
             }
-            clientes.add(customer)
         }
-    }
-        
-        clientes.add(customer);  //adiciona o cliente a lista
+        clientes.add(customer);
         return "redirect:/";  //Redireciona para customerList.html
     }
 
