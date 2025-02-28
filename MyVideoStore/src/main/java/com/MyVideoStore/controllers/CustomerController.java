@@ -12,24 +12,35 @@ import java.util.List;
 @RequestMapping("/")    //http://localhost:8080/VideoStore/
 public class CustomerController {
 
-    private List<Customer> clientes = new ArrayList<>();  //criar uma lista para armazenar os customers
+    private List<Customer> clientes = new ArrayList<>();  //criar uma lista para armazenar as contas dos clientes
     //(Esta lista pode ser usada para testar a funcionalidade, porem a versão final os clientes e os seus dados devem ser armazenados numa Base de Dados)
-
-    //pagina inicial
+    
+    private Customer loggedInCustomer == null  //Variavel para armazenar um cliente que estaja logado
+    
+    //pagina inicial catalogo
     @GetMapping
-    public String showCustomersList(Model model) {
+    public String showCatalogo(Model model) {
 //        model.addAttribute("customers", customers);
         return "catalogo";
     }
 
      @GetMapping("createAccount")  //http://localhost:8080/VideoStore/createAccount
-        public String showForm(Model model) {
+        public String showCreateAccountForm(Model model) {
             model.addAttribute("customer", new Customer());
-            return "createAccount";    //retorna a pagina createAccount.html ---->Fazer a pagina createAccount
+            return "createAccount";    //retorna a pagina createAccount.html ---->Fazer a pagina createAccount.html
         }
 
     @PostMapping("/createAccount")
-    public String addNew(@ModelAttribute("customer") Customer customer) {
+    public String addAccount(@ModelAttribute("customer") Customer customer) {
+        //Verifica se o cliente já existe
+        for( Customer c : clientes){
+            if(c.getUserName()/*<---Obtém o nome de usuário do cliente existente*/.equals(customer.getUserName())/*<---Obtém o nome de usuário do cliente que está tentando se registrar ou fazer login.*/){
+                return "redirect:/createAccount?error"; //caso o cliente ja exista é redirecionado para uma pagina de erro
+            }
+            clientes.add(customer)
+        }
+    }
+        
         clientes.add(customer);  //adiciona o cliente a lista
         return "redirect:/";  //Redireciona para customerList.html
     }
