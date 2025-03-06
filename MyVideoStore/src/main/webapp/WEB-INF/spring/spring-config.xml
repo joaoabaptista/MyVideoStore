@@ -41,5 +41,9 @@
         <property name="cacheable" value="false"/>
         <property name="characterEncoding" value="UTF-8"/>
     </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver" />
+    </bean>
 </beans>
 

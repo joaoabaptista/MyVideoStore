@@ -6,6 +6,7 @@ import java.util.Map;
 
 public class Customer {
 
+    private int id;
     private String userName;
     private String email;
     private String password;
@@ -41,5 +42,13 @@ public class Customer {
 
     public void setPasswordConfirm(String passwordConfirm) {
         this.passwordConfirm = passwordConfirm;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
