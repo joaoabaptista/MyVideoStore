@@ -1,8 +1,12 @@
 /home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/Exeptions/InvalidAmountException.java
+/home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/Services/CustomerService.java
+/home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/Repositorys/CustomerRepository.java
 /home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/Main.java
 /home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/models/Account.java
 /home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/error/ErrorMessage.java
 /home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/models/Customer.java
+/home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/Services/clientServiceInterface.java
 /home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/controllers/CustomerController.java
 /home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/Exeptions/InsufficientFundsException.java
 /home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/controllers/AdminController.java
+/home/joao-baptista/assignments/MyVideoStore/MyVideoStore/src/main/java/com/MyVideoStore/Services/ConnectionManager.java

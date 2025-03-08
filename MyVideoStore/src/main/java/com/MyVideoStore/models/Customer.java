@@ -1,15 +1,29 @@
 package com.MyVideoStore.models;
 
 
+import jakarta.persistence.*;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Entity
+@Table(name = "customers")
 public class Customer {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column (name = "user_name", unique = true, nullable = false, length = 50)
     private String userName;
+
+    @Column (name = "email", nullable = false, length = 50)
     private String email;
+
+    @Column (name = "password", nullable = false)
     private String password;
+
+    @Column (name = "password_confirm", nullable = false)
     private String passwordConfirm;
 
     public String getUserName() {

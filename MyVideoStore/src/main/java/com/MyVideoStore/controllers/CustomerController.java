@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/")    //http://localhost:8080/VideoStore/
+@RequestMapping("/VideoStore")    //http://localhost:8080/VideoStore/
 public class CustomerController {
 
     private final CustomerService customerService;
@@ -55,8 +55,15 @@ public class CustomerController {
 
         // Processa o formulário e adiciona o cliente à lista
         @PostMapping("/login")
-        public String addNew(@ModelAttribute("customer") Customer customer) {
+        public String login(@ModelAttribute("customer") Customer customer, Model model) {
+            Customer existingCustomer = customerService.findByUserName(customer.getUserName());
 
-            return "redirect:/";  //Redireciona para customerList.html
+            if (existingCustomer == null || !existingCustomer.getPassword().equals(customer.getPassword())) {
+                model.addAttribute("error", "Usuário ou senha inválidos");
+                return "login"; // Retorna para a página de login com erro
+            }
+
+            loggedInCustomer = existingCustomer; // Define o usuário logado
+            return "redirect:/"; // Redireciona para a página inicial
         }
 }

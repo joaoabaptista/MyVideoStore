@@ -5,6 +5,8 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    <import resource="persistence.xml"/>
+
     <!-- use Spring servlet for all requests, including static resources -->
     <mvc:default-servlet-handler/>
 
@@ -42,8 +44,14 @@
         <property name="characterEncoding" value="UTF-8"/>
     </bean>
 
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="org.postgresql.Driver" />
+    <bean id="databasePopulator" class="org.springframework.jdbc.datasource.init.ResourceDatabasePopulator">
+        <property name="scripts">
+            <list>
+                <value>classpath:db/videostore_seeds.sql</value>
+            </list>
+        </property>
     </bean>
+
+
 </beans>
 
