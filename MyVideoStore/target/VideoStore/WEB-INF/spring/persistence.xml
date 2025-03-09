@@ -33,7 +33,7 @@
     <bean id="emFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 
         <property name="dataSource" ref="dataSource"/>
-        <property name="packagesToScan" value="com.MyVideoStore.models"/>
+        <property name="packagesToScan" value="com.MyVideoStore.models, com.MyVideoStore.Repositorys"/>
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
         </property>
