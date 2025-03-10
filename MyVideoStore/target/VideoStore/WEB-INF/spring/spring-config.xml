@@ -54,7 +54,7 @@
 
     <!-- Ativa a detecção automática de repositórios do Spring Data JPA -->
     <context:component-scan base-package="com.MyVideoStore"/>
-    <jpa:repositories base-package="com.MyVideoStore.Repositorys"/>
+    <jpa:repositories base-package="com.MyVideoStore.models"/>
 
 
 

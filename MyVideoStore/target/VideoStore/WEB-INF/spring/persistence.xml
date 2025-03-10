@@ -30,10 +30,10 @@
     </bean>
 
     <!-- Entity Manager Factory bean provided by the Spring Framework -->
-    <bean id="emFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 
         <property name="dataSource" ref="dataSource"/>
-        <property name="packagesToScan" value="com.MyVideoStore.models, com.MyVideoStore.Repositorys"/>
+        <property name="packagesToScan" value="com.MyVideoStore.models"/>
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
         </property>
@@ -41,7 +41,7 @@
             <map>
                 <entry key="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
                 <entry key="hibernate.show_sql" value="true" />
-                <entry key="hibernate.hbm2ddl.auto" value="update"/>
+                <entry key="hibernate.hbm2ddl.auto" value="create"/>
             </map>
         </property>
     </bean>

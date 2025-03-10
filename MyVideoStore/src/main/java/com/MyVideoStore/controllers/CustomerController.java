@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/VideoStore")    //http://localhost:8080/VideoStore/
+@RequestMapping("/")    //http://localhost:8080/VideoStore/
 public class CustomerController {
 
     private final CustomerService customerService;
