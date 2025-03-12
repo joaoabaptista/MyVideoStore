@@ -1,6 +1,7 @@
 body {
     padding: 0px;
-    background-color: #3E3C62;
+    /*background: linear-gradient(to top, #23162C 0%, #8E60AF 100%);*/
+    background-color: #744992;
 }
 
 .upper_container {
@@ -22,6 +23,10 @@ body {
     border-radius: 5px;
 }
 
+.botao:hover{
+  background-color: #301F3D;
+}
+
 .main_container{
   display: flex;
 }
@@ -31,7 +36,7 @@ body {
     flex-direction: column;
     background-color: #5C5992;
     width: 50px;
-    height: 500px;
+    height: 100vw;
     padding: 10px;
 }
 
@@ -40,7 +45,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
     gap: 15px; 
     padding: 20px;
-    background-color: yellow;
+    /*background-color: yellow;*/
     flex-grow: 1;
 }
 
@@ -71,7 +76,7 @@ body {
     font-weight: bold;
     border-radius: 10px;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .movie_container:hover .movie_data{
