@@ -4,63 +4,76 @@ body {
 }
 
 .upper_container {
+    margin: 15px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     height: 50px;
+    background-color: #A682C0;
 }
 
 .botao {
     background-color: #5C6AC4;
     color: white;
-    padding: 10px 20px;
+    margin: 10px;
+    padding: 10px 35px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.main_container{
+  display: flex;
 }
 
 .side_for_icons {
     display: flex;
     flex-direction: column;
     background-color: #5C5992;
-    width: 100px;
+    width: 50px;
+    height: 500px;
     padding: 10px;
 }
 
-/* Esconde o container por padrão */
-.hidden-container {
-    display: none;
-    width: 200px;
-    height: 100px;
-    background-color: #5C6AC4;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    position: absolute;
-    top: 100%; /* Posiciona abaixo do botão */
-    left: 0;
-    margin-top: 5px; /* Pequeno espaço entre botão e container */
+.content_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 15px; 
+    padding: 20px;
+    background-color: yellow;
+    flex-grow: 1;
 }
 
-/* Faz o container aparecer ao passar o mouse no botão */
-.hover-container {
-    position: relative; /* Necessário para o posicionamento do hidden-container */
+.movies_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
 }
 
-.hover-container:hover .hidden-container {
-    display: block;
-}
-
-/* Estiliza o botão */
-.hover_btn {
-    background-color: #4A90E2;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
+.movie_container {
+    background-color: blue;
     width: 100%;
+    height: 200px; /* Altura fixa dos blocos azuis */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Empurra a parte vermelha para baixo */
 }
+
+.movie_data {
+    background-color: red;
+    width: 100%;
+    height: 33%; /* Ocupa 1/3 da altura do movie_container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+
 
 
 <------------------------------------------------------------------>
@@ -81,15 +94,55 @@ body {
       <button class="botao">Create Account</button>
     </div>
     
-    <div class="side_for_icons">
-        <div class="hover-container">
-            <button class="hover_btn">Passe o Mouse</button>
-            <div class="hidden-container">Novo Container</div>
+    <div class="main_container">
+      
+        <div class="side_for_icons">
+            <!-- Ícones aqui -->
         </div>
+        
+      <div class="content_container">
+        
+        <div class="movies_grid">
+          
+          <div class="movie_container">
+            <div class="movie_data">Info do Filme</div>
+          </div>
+          
+          <div class="movie_container">
+            <div class="movie_data">Outro Filme</div>
+          </div>
+          
+          <div class="movie_container">
+           <div class="movie_data">Mais um Filme</div>
+          </div>
+          
+          <div class="movie_container">
+            <div class="movie_data">Info do Filme</div>
+          </div>
+          
+          <div class="movie_container">
+            <div class="movie_data">Outro Filme</div>
+          </div>
+          
+          <div class="movie_container">
+           <div class="movie_data">Mais um Filme</div>
+          </div>
+          
+          <div class="movie_container">
+            <div class="movie_data">Info do Filme</div>
+          </div>
+          
+          <div class="movie_container">
+            <div class="movie_data">Outro Filme</div>
+          </div>
+          
+          <div class="movie_container">
+           <div class="movie_data">Mais um Filme</div>
+          </div>
+        </div>
+        
+      </div>
+      
     </div>
-
 </body>
 </html>
-
-
-
