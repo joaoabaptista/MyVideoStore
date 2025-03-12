@@ -70,6 +70,12 @@ body {
     color: white;
     font-weight: bold;
     border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.movie_container:hover .movie_data{
+  opacity: 1;
 }
 
 
