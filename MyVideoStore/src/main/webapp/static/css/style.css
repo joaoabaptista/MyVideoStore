@@ -1,452 +1,98 @@
-/*body {*/
-/*    background-color: lightblue;*/
-/*    padding: 0px;*/
-/*    margin: 0px;*/
-/*}*/
-
-/*!*.container{*!*/
-/*!*    padding-top: 80px;*!*/
-/*!*    padding-bottom: 160px;*!*/
-/*!*    display: flex;*!*/
-/*!*    justify-content: center;*!*/
-/*!*    align-items: center;*!*/
-/*!*    height: auto;*!*/
-/*!*    background-color: yellow;*!*/
-/*!*    margin-right: 200px;*!*/
-/*!*    margin-left: 200px;*!*/
-/*!*}*!*/
-
-/*.header{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: flex-start;*/
-/*    align-items: center;*/
-/*    gap: 20px;*/
-/*}*/
-
-/*.homepage{*/
-/*    !*background:*!*/
-/*    !*        linear-gradient(112.64deg, blue 0.33%, deeppink 100%);*!*/
-/*    padding: 0 40px;*/
-/*    background-size: cover;*/
-
-/*}*/
-
-/*.homepage .container{*/
-/*    padding-top: 80px;*/
-/*    padding-bottom: 160px;*/
-/*}*/
-
-/*.card{*/
-/*    margin-top: 40px;*/
-/*    max-width: 100%;*/
-/*    padding: 30px;*/
-/*    background-color: white;*/
-/*}*/
-
-
-
-body
-{
-    margin: 0px;
+body {
     padding: 0px;
-    font-family: Arial, sans-serif;
-    background-color: #EBEEFA;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-}
-@media (max-width: 450px) {
-    body {
-        background-color: green;
-    }
-    .customer-boxx {
-        background-color: black;
-        display: flex;
-        height: auto;
-        margin-right: 20px;
-        margin-left: 0px;
-        overflow: hidden;
-        padding: 20px;
-    }
-}
-.header-container {
-    padding-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    width: 70vw;
+    /*background: linear-gradient(to top, #23162C 0%, #8E60AF 100%);*/
+    background-color: #744992;
 }
 
-.goBack{
-    margin-bottom: 20px;
-    color: #007bff;
-    align-content: center;
-}
-
-.button-primary {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button-primary:hover {
-    background-color: #191a1b;
-}
-
-.button-primary:active {
-    background-color: #003f7f;
-}
-
-.references
-{
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: grey;
-}
-.customer-box{
-    background-color: white;
-    display: flex;
-    margin-right: 20px;
-    margin-left: 20px;
-    overflow: hidden;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-radius: 10px;
-    padding: 20px;
-}
-.photo{
-    max-height: 190px;
-    width: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    margin-right: 15px;
-}
-
-.text-container{
-    margin-left: 0px;
+.upper_container {
+    margin-left: 60px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    gap: 0px;
+    height: 50px;
+    background-color: #A682C0;
 }
 
-.name{
-    padding: 10px 20px;
-    color: black;
-    width: 300px;
-    margin: 0px;
-    font-size: 26px;
-}
-
-.button-second {
-    padding: 10px 20px;
-    width: 80px;
-    border: none;
-    background-color: white;
-    color: #0921a8;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-left: 500px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button-second:hover {
-    background-color: #EBEEFA;
-}
-
-.button-second:active {
-    background-color: #899c9f;
-}
-
-.button-third {
-    padding: 10px;
-    width: 120px;
-    border: none;
-    background-color: #dce5ee;
-    color: #0921a8;
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 0px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button-third:hover {
-    background-color: #EBEEFA;
-}
-
-.button-third:active {
-    background-color: #899c9f;
-}
-
-.info-box{
-
-    color: darkgray;
-    gap: 150px;
-    margin-right: 300px ;
-    width:40px;
-    height:40px;
-    display:grid;
-    grid-template-columns: 200px 200px;
-    grid-row: auto;
-    grid-column-gap: 20px;
-    row-gap: 1000px;
-}
-
-.phone-email-numberaccounts-total-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: left;
-    margin-top: 120px;
-    margin-left: -1000px;
-    gap: 180px;
-}
-.phone, .email, .numberaccounnts, .total{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-
-}
-.info-box h5{
-    margin-bottom: 10px;
-    font-size: 12px;
-}
-.phone h4, .email h4, .numberaccounnts h4, .total h4 {
-    color: black;
-    margin: 0;
-    font-size: 16px;
-}
-#img{
-    border: 0;
-    border-radius: 10px;
-}
-.customer-boxx
-{
-    background-color: white;
-    display: flex;
-    height: 100vw;
-    margin-right: 20px;
-    margin-left: 0px;
-    overflow: hidden;
-    padding: 20px;
-
-}
-.columns
-{
-    display: flex;
-    flex-direction: column;
-}
-
-.row
-{
-    display: flex;
-    border: 0;
-    border-radius: 10px;
-}
-
-.general
-{
-    display: flex;
-}
-
-.photo1
-{
-    height: 10vw;
-    width: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    margin-right: 10px;
-}
-
-
-.column-header-table
-{
-    display: flex;
-    flex-direction: column;
-}
-
-.button-edit{
-    font-size: 12px;
-    text-align: right;
-    padding: 5px 10px;
-    border:none;
-    background-color: #3C53CF;
+.botao {
+    background-color: #5C6AC4;
     color: white;
-    font-weight: bold;
-    border-radius: 5px;
+    margin: 10px;
+    padding: 10px 7px;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.button-delete{
-    font-size: 12px;
-    text-align: right;
-    padding: 5px 10px;
-    border:none;
-    background-color: #EBEEFA;
-    color: #3C53CF;
-    font-weight: bold;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.button-delete:hover {
-    background-color: rgb(197, 208, 225);
-}
-.button-edit:hover{
-    background-color: lightsteelblue;
-}
-.table, th, td
-{
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 30px;
-    font-size: 12px;
-    font-weight: bold;
-    border-collapse: collapse;
-    padding: 5px;
-    border-top: 1px solid rgb(202, 200, 200);
-
-
-}
-
-.table th{
-    color: darkgrey;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    border-top-color: #EBEEFA;
-}
-
-
-
-.table{
-    background-color: white;
-    border-radius: 10px;
-    width: 100%;
-}
-.content{
-    text-align: left;
-}
-.content-id{
+    display: inline-block; /* Faz com que o botão tenha largura apenas do conteúdo */
+    width: auto; /* Define a largura automaticamente */
     text-align: center;
 }
-.contentspan1{
-    background-color: hsl(84, 100%, 60%);
-    padding: 0px 20px;
-    border-radius: 50px;
 
-}
-.contentspan2{
-    background-color: hsl(60, 100%, 60%);
-    padding: 0px 20px;
-    border-radius: 50px;
-}
-.contentspan3{
-    background-color: hsl(340, 50%, 77%);
-    padding: 0px 20px;
-    border-radius: 50px;
-}
-.action{
-    text-align: right;
+.botao:hover{
+    background-color: #301F3D;
 }
 
-.btns{
-    font-size: 12px;
-    text-align: right;
-    padding: 5px 10px;
-    border:none;
-    background-color: #EBEEFA;
-    color: #3C53CF;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.botoes_container {
+    display: flex;
+    gap: 15px; /* Define um espaçamento entre os botões */
 }
 
-.align-btns{
-    text-align: right;
-    column-span: inherit;
+.main_container{
+    display: flex;
+    margin-left: 60px; /* Evita que o conteúdo fique embaixo do menu */
 }
 
-.btns:hover {
-    background-color: rgb(224, 228, 234);
-}
-.btn-withdraw-all-money:hover{
-    background-color: lightsteelblue;
+.side_for_icons {
+    display: flex;
+    flex-direction: column;
+    background-color: #5C5992;
+    width: 50px;
+    height: 100vw;
+    padding: 10px;
+    position: fixed; /* Fixa na tela */
+    left: 0; /* Cola na esquerda */
+    top: 0; /* Começa do topo */
 }
 
-.btn-withdraw-all-money{
-    text-align: right;
+.content_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    /*background-color: yellow;*/
+    flex-grow: 1;
 }
-.btn-withdraw-all-money{
-    font-size: 12px;
-    text-align: right;
-    padding: 5px 10px;
-    border:none;
-    background-color: #3C53CF;
+
+.movies_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Garante sempre 4 colunas */
+    gap: 15px;
+    width: 100%;
+}
+
+
+.movie_container {
+    background-color: blue;
+    width: 100%;
+    height: 200px; /* Altura fixa dos blocos azuis */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Empurra a parte vermelha para baixo */
+}
+
+.movie_data {
+    background-color: red;
+    width: 100%;
+    height: 33%; /* Ocupa 1/3 da altura do movie_container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
-tr:hover{
-    background-color: #f4f4f6;
+.movie_container:hover .movie_data{
+    opacity: 1;
 }
-
-.btnsBack{
-    font-size: 15px;
-    align-content: center;
-    text-align: right;
-    padding: 5px 10px;
-    border:none;
-    background-color: #c1cfff;
-    color: #3C53CF;
-    font-weight: bold;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.btnsBack:hover{
-    font-size: 15px;
-    align-content: center;
-    text-align: right;
-    padding: 5px 10px;
-    border:none;
-    background-color: #929fff;
-    color: #3C53CF;
-    font-weight: bold;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.btnsBack:active{
-    font-size: 15px;
-    align-content: center;
-    text-align: right;
-    padding: 5px 10px;
-    border:none;
-    background-color: #5e63ff;
-    color: #3C53CF;
-    font-weight: bold;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-

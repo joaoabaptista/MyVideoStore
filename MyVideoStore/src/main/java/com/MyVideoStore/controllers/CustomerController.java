@@ -1,7 +1,9 @@
 package com.MyVideoStore.controllers;
 
 import com.MyVideoStore.Services.CustomerService;
+import com.MyVideoStore.Services.MovieService;
 import com.MyVideoStore.models.Customer;
+import com.MyVideoStore.models.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,10 +17,12 @@ import java.util.List;
 public class CustomerController {
 
     private final CustomerService customerService;
+    private final MovieService movieService;
 
     @Autowired
-    public CustomerController(CustomerService customerService) {
+    public CustomerController(CustomerService customerService, MovieService movieService) {
         this.customerService = customerService;
+        this.movieService = movieService;
     }
     
     private Customer loggedInCustomer = null; //Variavel para armazenar um cliente que estaja logado
@@ -26,7 +30,9 @@ public class CustomerController {
     //pagina inicial catalogo
     @GetMapping
     public String showCatalogo(Model model) {
-        return "catalogo";
+        List<Movie> movies = movieService.getAllMovies();
+        model.addAttribute("movies", movies);
+        return "myCatalogo";
     }
 
      @GetMapping("createAccount")  //http://localhost:8080/VideoStore/createAccount

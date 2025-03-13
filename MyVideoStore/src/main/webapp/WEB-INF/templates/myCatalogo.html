@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}">
+</head>
+
+<body>
+
+<div class="upper_container">
+    <p>Catalogo</p>
+    <div class="botoes_container">
+        <a th:href="@{/login}" class="botao">Login</a>
+        <a th:href="@{/createAccount}" class="botao">Create Account</a>
+    </div>
+</div>
+
+
+<div class="main_container">
+      
+        <div class="side_for_icons">
+            <!-- Ícones aqui -->
+        </div>
+        
+      <div class="content_container">
+
+          <div class="movies_grid">
+              <div class="movie_container" th:each="movie : ${movies}">
+                  <div class="movie_data">
+                      <p th:text="${movie.title}"></p>
+                      <p th:text="'Ano: ' + ${movie.year}"></p>
+                      <p th:text="'Duração: ' + ${movie.duration} + ' min'"></p>
+                      <p th:text="'Preço: €' + ${movie.price}"></p>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+      
+    </div>
+</body>
+</html>
