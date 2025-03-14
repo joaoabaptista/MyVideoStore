@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CLIENTE</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <div class="main_container">
+    
+      <div class="client_data">
+        <h1 class="title">Ramadan </h1>
+        <p>ramadan@gmail.com</p>
+        <p>999888777</p>
+        <p>filmes vistos</p>
+      </div>
+      
+      <div class="list_of_movies_container">
+        
+        <h1 class="title">List of Movies </h1>
+        
+        <div class="movies_list">
+          
+          <div class="movies_card">
+            <p>matrix</p>
+            <p>diretor</p>
+            <p>data realizacao</p>
+            
+          </div>
+          
+          <div class="movies_card">
+            <p>gladiator</p>
+            <p>diretor</p>
+            <p>data realizacao</p>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </body>
+</html>
+
+
+  ____________________________________________
+
+
+  body{
+  padding: 0px;
+  background-color: #4B305F;
+}
+.title {
+	color: #5C6AC4;
+}
+
+.main_container{
+  display: flex;
+  flex-direction: row;
+}
+
+.client_data{
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100vh;
+  padding: 10px;
+}
+
+.list_of_movies_container{
+  background-color: yellow;
+  margin-left: 10px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.movies_list {
+  display: grid;
+  grid-gap: 10px; /* Adiciona espaçamento entre as cartas */
+}
+
+
+.movies_card{
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: #CCD4EA;
+  gap: 10px;
+}
+
+.movies_card:hover {
+  background-color: #A0B4D8; /* Mudando a cor ao passar o mouse */
+  cursor: pointer; /* Torna o cursor um ponteiro */
+}
