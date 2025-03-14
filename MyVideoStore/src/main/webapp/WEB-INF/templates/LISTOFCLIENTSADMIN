@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List of clients</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <head>
+       <h1 class="title">List of clients </h1>
+    </head>
+    
+   <div class="client_cards">
+  <div class="client_info"> 
+    <p class="name">Cliente 1</p>
+    <p class="email">email1@example.com</p>
+    <p class="num_filmes">10 filmes</p>
+  </div>
+  <button class="view">View</button>
+</div>
+
+<div class="client_cards">
+  <div class="client_info"> 
+    <p class="name">Cliente com Nome Maior</p>
+    <p class="email">email2@example.com</p>
+    <p class="num_filmes">5 filmes</p>
+  </div>
+  <button class="view">View</button>
+</div>
+
+
+  </body>
+</html>
+
+
+___________________________________________________
+
+body{
+  padding: 25px;
+  background-color: #69318C;
+}
+
+.container_for_clientslist{
+  justify-content: center;
+  background-color: blue;
+  margin: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  
+  
+}
+
+.client_cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightblue;
+  padding: 7px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.client_info {
+  display: grid;
+  grid-template-columns: 150px 200px 100px; /* Define larguras fixas */
+  gap: 10px;
+  flex-grow: 1; /* Faz a info ocupar o espaço disponível */
+}
+
+.client_cards .view {
+  padding: 5px 10px;
+  background-color: #4CAF50; /* Cor do botão */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.client_cards .view:hover {
+  background-color: #45a049; /* Efeito de hover no botão */
+}
+
+
+.title {
+	color: #5C6AC4;
+}
