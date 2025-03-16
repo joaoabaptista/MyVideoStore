@@ -69,6 +69,11 @@ public class CustomerController {
                 return "login"; // Retorna para a página de login com erro
             }
 
+            if (existingCustomer.getUserName().equals("admin123")) {
+                loggedInCustomer = existingCustomer;
+                return "redirect:/adminPage";
+            }
+
             loggedInCustomer = existingCustomer; // Define o usuário logado
             return "redirect:/"; // Redireciona para a página inicial
         }
