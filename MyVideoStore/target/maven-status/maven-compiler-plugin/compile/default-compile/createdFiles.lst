@@ -1,14 +1,8 @@
+com/MyVideoStore/Services/CustomerService.class
+com/MyVideoStore/Services/MovieService.class
 com/MyVideoStore/models/Customer.class
 com/MyVideoStore/Exeptions/InvalidAmountException.class
 com/MyVideoStore/models/Account.class
-com/MyVideoStore/models/Repositorys/MovieRepository.class
-com/MyVideoStore/models/Movie.class
 com/MyVideoStore/Exeptions/InsufficientFundsException.class
-com/MyVideoStore/error/ErrorMessage.class
-com/MyVideoStore/controllers/CustomerController.class
-com/MyVideoStore/Services/CustomerService.class
-com/MyVideoStore/models/Repositorys/CustomerRepositoryImplementation.class
-com/MyVideoStore/Services/MovieService.class
-com/MyVideoStore/controllers/AdminController.class
-com/MyVideoStore/models/Repositorys/CustomerRepository.class
 com/MyVideoStore/Services/clientServiceInterface.class
+com/MyVideoStore/error/ErrorMessage.class

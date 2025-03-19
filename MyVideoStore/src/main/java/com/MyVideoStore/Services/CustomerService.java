@@ -1,7 +1,8 @@
 package com.MyVideoStore.Services;
 
-import com.MyVideoStore.models.Repositorys.CustomerRepository;
 import com.MyVideoStore.models.Customer;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,42 +11,45 @@ import java.util.List;
 @Service
 public class CustomerService implements clientServiceInterface {
 
-//    private ConnectionManager connectionManager;
-    private final CustomerRepository customerRepository;
+    private EntityManagerFactory emFactory;
 
-    @Autowired
-    public CustomerService(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
+    public void setEmFactory(EntityManagerFactory emFactory) {
+        this.emFactory = emFactory;
     }
+
 
 
     @Override
     public Customer get(int id) {
+        EntityManager em = emFactory.createEntityManager();
 
-        return customerRepository.findById(id).get();//Optional?????
+        Customer customer = em.find(Customer.class, id);
+        return customer;
     }
-
 
     @Override
     public Customer create(Customer customer) {
-        return customerRepository.save(customer);
+
+        EntityManager em = emFactory.createEntityManager();
+
+        try {
+            if(!em.getTransaction().isActive()) {
+               em.getTransaction().begin();
+            }
+
+
+        }
+
 
     }
 
     @Override
     public List<Customer> listAllCustomers() {
-        return customerRepository.findAll();
+        return List.of();
     }
 
     @Override
     public boolean existByUserName(String username) {
-
-        return customerRepository.existsByUserName(username);
+        return false;
     }
-
-    public Customer findByUserName(String userName) {
-        return customerRepository.findByUserName(userName);
-    }
-
-
 }

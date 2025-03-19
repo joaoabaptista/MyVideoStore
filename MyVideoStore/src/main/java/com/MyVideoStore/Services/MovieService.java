@@ -1,37 +1,42 @@
 package com.MyVideoStore.Services;
 
+
 import com.MyVideoStore.models.Movie;
-import com.MyVideoStore.models.Repositorys.MovieRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
 import java.util.List;
 
-//@Service
-//public class MovieService {
-//
-//    @Autowired
-//    private final MovieRepository movieRepository;
-//
-//    public MovieService(MovieRepository movieRepository) {
-//        this.movieRepository = movieRepository;
-//    }
-//
-//    public List<Movie> getAllMovies() {
-//        return movieRepository.findAll();
-//    }
-//}
-
 @Service
-public class MovieService {
-    private final MovieRepository movieRepository;
+public class MovieService implements MovieServiceInterface {
 
-    @Autowired
-    public MovieService(MovieRepository movieRepository) {
-        this.movieRepository = movieRepository;
+    private EntityManagerFactory emFactory;
+
+    public void setEmFactory(EntityManagerFactory emFactory) {
+        this.emFactory = emFactory;
     }
 
+
+
+    @Override
     public List<Movie> getAllMovies() {
-        return movieRepository.findAll();
+        return List.of();
+    }
+
+    @Override
+    public Movie get(int id) {
+        return null;
+    }
+
+    @Override
+    public Movie create(Movie movie) {
+        return null;
+    }
+
+    @Override
+    public Movie updatePrice(int id) {
+        return null;
     }
 }
